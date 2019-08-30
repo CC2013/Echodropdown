@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../src/echo-dropdown.css">
+</head>
+<body>
+  <div class="echo-dropdown">
+    <!-- <label>部门:</label>
+    <div class="dropdown-outer-box">
+      <div class="dropdown-box">
+        <div class="text">
+          <span class="content"></span>
+          <span class="arrow"></span>
+        </div>
+        <div class="select-box">
+          <div class="search-item">
+            <span class="search-img"></span>
+            <input class="search" placeholder="请输入关键字搜索">
+          </div>
+          <ul class="dropdown-menu">
+            <li class="dropdown-menu-item active" data-item="0"><a href="javascript:void(0)">名称1</a></li>
+            <li class="dropdown-menu-item" data-item="0"><a href="javascript:void(0)">名称2</a></li>
+            <li class="dropdown-menu-item" data-item="0"><a href="javascript:void(0)">名称3</a></li>
+            <li class="dropdown-menu-item" data-item="0"><a href="javascript:void(0)">名称4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <script src="./jquery.js"></script>
+  <script src="../src/echo-dropdown.js"></script>
+  <script>
+    // 期待使用方式
+    var $ele = $('.echo-dropdown');
+    var options = {
+      source: ['名称1', '名称2'],
+      search: true,
+      afterSelect: function(val) {
+        console.log('执行请求，值为 ', val);
+      }
+    };
+    $ele.echodropdown(options);
+    // $ele.html(['<p>1</p>','<p>1</p>']);
+  </script>
+</body>
+</html>
